@@ -1,0 +1,18 @@
+jdk: oraclejdk7
+language: android
+env:
+  global:
+    - ADB_INSTALL_TIMEOUT=8
+
+android:
+  components:
+    - build-tools-23.0.1
+    - android-23
+    - sys-img-armeabi-v7a-android-23
+    - extra-android-m2repository
+    - extra-google-m2repository
+  script:
+    - ./gradlew build
+
+after_failure:
+  - cat /home/travis/build/longdivision/hacker-news-android/app/build/outputs/lint-results.xml
