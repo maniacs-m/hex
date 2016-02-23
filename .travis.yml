@@ -13,6 +13,7 @@ android:
     - extra-google-m2repository
   script:
     - ./gradlew build
+    - ./gradlew test
 
 after_failure:
   - cat /home/travis/build/longdivision/hacker-news-android/app/build/outputs/lint-results.xml
