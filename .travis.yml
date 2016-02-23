@@ -16,4 +16,4 @@ android:
     - ./gradlew test
 
 after_failure:
-  - cat /home/travis/build/longdivision/hacker-news-android/app/build/outputs/lint-results.xml
+  - cat /home/travis/build/longdivision/hex/app/build/outputs/lint-results.html
