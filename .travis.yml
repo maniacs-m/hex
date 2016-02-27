@@ -3,7 +3,6 @@ language: android
 env:
   global:
     - ADB_INSTALL_TIMEOUT=8
-
 android:
   components:
     - platform-tools
@@ -13,9 +12,8 @@ android:
     - extra-android-m2repository
     - extra-google-m2repository
     - sys-img-armeabi-v7a-android-23
-  script:
-    - ./gradlew build
-    - ./gradlew test
-
+script:
+- ./gradlew build
+- ./gradlew test
 after_failure:
   - cat /home/travis/build/longdivision/hex/app/build/outputs/lint-results.html
