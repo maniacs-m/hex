@@ -18,6 +18,9 @@ android {
             minifyEnabled false
         }
     }
+    adbOptions {
+        timeOutInMs 480000
+    }
 }
 
 dependencies {
